@@ -5,7 +5,7 @@ from time import time
 
 
 size = 499
-mem = [[-1 for i in range(size)] for j in range(size)]
+mem = [[-1 for _ in range(size)] for __ in range(size)]
 
 def lcs_with_memoization(X, Y, m, n):
   if m == 0 or n == 0:
@@ -22,8 +22,8 @@ def lcs_with_memoization(X, Y, m, n):
   return mem[m - 1][n - 1]
 
 start = time()
-X = "".join((choice('KGBNRYUO') for i in range(size)))
-Y = "".join((choice('RWSDXQPL') for i in range(size)))
+X = "".join((choice('KGBNRYUO') for _ in range(size)))
+Y = "".join((choice('RWSDXQPL') for _ in range(size)))
 print(f"Result: {lcs_with_memoization(X, Y, size, size)}")
 
 end = time()
